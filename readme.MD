@@ -4,5 +4,7 @@
 <p>To run the setup simply clone the repository to your desired location. The run the following commands</p>
 <code>
 	npm install
+</code>
+<code>
 	grunt
 </code>
