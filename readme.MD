@@ -5,6 +5,7 @@
 <code>
 	npm install
 </code>
+<br/>
 <code>
 	grunt
 </code>
