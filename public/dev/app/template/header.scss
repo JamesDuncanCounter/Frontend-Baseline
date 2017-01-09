@@ -3,24 +3,55 @@ body {
 }
 
 header {
-	//Set div to 12 columns
+	text-align: center;
+	padding: 0;
 	@include make-xs-column(12);
+	margin-bottom: 2em;
+
+	h1 {
+		line-height: 2em;
+		margin-bottom: 20px;
+	}
+}
+
+.pages {
 	
-	background-color: green;
+	li {
+		list-style: none;
+		@include make-xs-column(6);
+		@include make-sm-column(4);
+		text-align: center;
+
+		a {
+			background-color: $gray-lighter;
+			padding: 2em;
+			font-size:1.4em;
+			display: block;
+
+			&:hover {
+				text-decoration: none;
+				background-color: $gray-light;
+				color: white;
+			}
+		}
+
+	}
+}
+
+
 	
 	// Target small Brealpoint
 	@media (min-width: $screen-sm) {
-		background-color: blue;
+		
 	} 
 	
 	// Target medium Brealpoint
 	@media (min-width: $screen-md) {
-		background-color: orange;
+		
 	}
 
 	
 	// Target large Brealpoint
 	@media (min-width: $screen-lg) {
-		background-color: red;
+		
 	} 
-}
