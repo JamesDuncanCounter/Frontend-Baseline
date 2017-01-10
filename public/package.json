@@ -1,9 +1,9 @@
 {
   "name": "artportfolio",
+
   "version": "1.0.0",
   "dependencies": {
-    "jquery": "^3.1.1",
-    "lodash": "^4.17.4"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "express": "^4.14.0",
@@ -12,6 +12,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.2",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-express": "^1.4.1",
     "grunt-parallel": "^0.5.1",
     "ssi": "^0.1.5",
