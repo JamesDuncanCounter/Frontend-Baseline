@@ -26,24 +26,25 @@ module.exports = function(grunt) {
         }
       }
     },
-
+    
+    //Copy fonts from bootstrap to dev and then to dist
     copy: {
-        dev_bootstrap_fonts: {
-            files: [{
-                expand: true,
-                cwd: 'node_modules/bootstrap-sass/assets/fonts/bootstrap/',
-                src: ['**/*'],
-                dest: 'dev/fonts/'
-            }]
-        },
-        dist_fonts: {
-            files: [{
-                expand: true,
-                cwd: 'dev/fonts/',
-                src: ['**/*'],
-                dest: 'dist/fonts/'
-            }]
-        },
+      dev_bootstrap_fonts: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/bootstrap-sass/assets/fonts/bootstrap/',
+          src: ['**/*'],
+          dest: 'dev/fonts/'
+        }]
+      },
+      dist_fonts: {
+        files: [{
+          expand: true,
+          cwd: 'dev/fonts/',
+          src: ['**/*'],
+          dest: 'dist/fonts/'
+        }]
+      },
     },
 
     //Compress the JS file and output to dist
