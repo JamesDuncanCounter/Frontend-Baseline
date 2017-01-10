@@ -7,7 +7,11 @@ header {
 	padding: 0;
 	@include make-xs-column(12);
 	margin-bottom: 2em;
+	height: 80px;
 
+	@media (min-width: $screen-lg) {
+		background-color: $gray-lighter;
+	}
 	h1 {
 		line-height: 2em;
 		margin-bottom: 20px;
@@ -42,19 +46,3 @@ header {
 }
 
 
-	
-// Target small Brealpoint
-@media (min-width: $screen-sm) {
-	
-} 
-
-// Target medium Brealpoint
-@media (min-width: $screen-md) {
-	
-}
-
-
-// Target large Brealpoint
-@media (min-width: $screen-lg) {
-	
-} 
