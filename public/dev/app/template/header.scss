@@ -1,50 +1,14 @@
-body {
-	position: relative;
-}
-
 header {
-	text-align: center;
-	padding: 0;
-	@include make-xs-column(12);
+	@include make-col(12);
 	margin-bottom: 2em;
-	height: 100px;
+}
+.module-container {
+	@include make-row();
+	flex-direction: row-reverse;
+}
+.box {
 	background-color: $gray-lighter;
-
-	@media (min-width: $screen-lg) {
-		
-	}
-
-	h1 {
-		line-height: 2em;
-		margin-bottom: 20px;
-	}
+	border: solid 1px $gray-dark;
+	padding: 20px;
 }
-
-.pages {
-	ul {
-		margin: 0;
-		padding: 0;
-
-		li {
-			list-style: none;
-			@include make-sm-column(4);
-			text-align: center;
-			margin-bottom: 2em;
-
-			a {
-				background-color: $gray-lighter;
-				padding: 2em;
-				font-size:1.4em;
-				display: block;
-
-				&:hover {
-					text-decoration: none;
-					background-color: $gray-light;
-					color: white;
-				}
-			}
-		}
-	}
-}
-
 

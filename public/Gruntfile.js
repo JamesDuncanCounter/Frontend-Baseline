@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-    
+  global.Tether = require('tether');
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     concat: {
       js: {
         files: {
-          'dev/javascript/bundle.js': ['node_modules/jquery/dist/jquery.js', 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', 'dev/app/**/*.js']
+          'dev/javascript/bundle.js': ['node_modules/jquery/dist/jquery.js', 'node_modules/tether/dist/js/tether.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'dev/app/**/*.js']
         }
       }
     },
