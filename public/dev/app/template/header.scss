@@ -4,10 +4,11 @@ header {
 }
 .module-container {
 	@include make-row();
-	flex-direction: row-reverse;
+	flex-direction: row;
 }
+
 .box {
-	background-color: $gray-lighter;
+	@include gradient-directional();
 	border: solid 1px $gray-dark;
 	padding: 20px;
 }

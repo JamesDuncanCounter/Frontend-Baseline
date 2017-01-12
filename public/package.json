@@ -1,12 +1,16 @@
 {
-  "name": "artportfolio",
-
-  "version": "1.0.0",
+  "name": "frontend-framework",
+  "authors": [
+    "James Counter - james.counter@gmail.com"
+  ],
+  "version": "0.0.1",
   "dependencies": {
     "jquery": "^3.1.1"
   },
+
   "devDependencies": {
     "express": "^4.14.0",
+    "grunt-modernizr": "^1.0.0",
     "grunt": "0.4.2",
     "grunt-contrib-concat": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
@@ -17,6 +21,7 @@
     "grunt-parallel": "^0.5.1",
     "ssi": "^0.1.5",
     "bootstrap": "4.0.0-alpha.6",
+    "matchdep": "~0.3.0",
     "tether": "^1.4.0"
   }
 }

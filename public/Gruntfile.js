@@ -1,8 +1,11 @@
 module.exports = function(grunt) {
-  global.Tether = require('tether');
+
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+
 
     // Boot up a server to serve the your  project
     express: {
@@ -22,21 +25,51 @@ module.exports = function(grunt) {
     concat: {
       js: {
         files: {
-          'dev/javascript/bundle.js': ['node_modules/jquery/dist/jquery.js', 'node_modules/tether/dist/js/tether.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'dev/app/**/*.js']
+          'dev/javascript/bundle.js':
+            [
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/tether/dist/js/tether.js',
+            'node_modules/bootstrap/dist/js/bootstrap.js',
+            'dev/app/**/*.js'
+            ]
         }
       }
     },
+
+
+    modernizr: {
+      dist: {
+        "parseFiles": true,
+        "customTests": [],
+        "devFile": "dev/javascript/modernizr-custom.js",
+        "dest": "dist/js/modernizr.js",
+        "tests": [
+          "cssgradients"
+        ],
+
+        "options": [
+          "domPrefixes",
+          "prefixes",
+          "addTest",
+          "atRule",
+          "hasEvent",
+          "mq",
+          "prefixed",
+          "prefixedCSS",
+          "prefixedCSSValue",
+          "testAllProps",
+          "testProp",
+          "testStyles",
+          "html5shiv",
+          "setClasses"
+        ],
+        "uglify": true
+      }
+    },
+
     
     //Copy fonts from bootstrap to dev and then to dist
     copy: {
-      dev_bootstrap_fonts: {
-        files: [{
-          expand: true,
-          cwd: 'node_modules/bootstrap-sass/assets/fonts/bootstrap/',
-          src: ['**/*'],
-          dest: 'dev/fonts/'
-        }]
-      },
       dist_fonts: {
         files: [{
           expand: true,
@@ -72,6 +105,7 @@ module.exports = function(grunt) {
       }
     },
 
+
     //Setup the watch tasks
     watch: {
         options: {
@@ -82,23 +116,15 @@ module.exports = function(grunt) {
     }
   });
 
-  //Load the grunt tasks in
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-express');
-
   //Register the default grunt task
   grunt.registerTask('default',[
-    'express', 
-    'concat', 
+    'express',
+    'modernizr',
+    'concat',
     'sass',
     'copy',
-    'uglify', 
+    'uglify',
     'watch'
   ]);
-  
 
 }
