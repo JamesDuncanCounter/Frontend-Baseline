@@ -30,8 +30,8 @@ You will only need to follow the installation steps once.
 
 * Install packages
 
-	**npm install
+	**npm install**
 
 * Run grunt default tasks
 
-	**grunt
+	**grunt**
