@@ -18,7 +18,7 @@ You will only need to follow the installation steps once.
 
 	**npm install bower -g**
 
-	> Run in project root (publicr) as administrator / sudo
+	> Run in project root (public) as administrator / sudo
 
 # Setup
 
