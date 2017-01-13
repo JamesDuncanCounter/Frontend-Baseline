@@ -11,5 +11,6 @@ header {
 .box {
 	border: solid 1px $gray-dark;
 	padding: 20px;
+	@include border-radius(10px);
 }
 

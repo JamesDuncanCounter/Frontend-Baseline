@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    // Boot up a server to serve the your  project
+    // Boot up an express server to serve the project
     express: {
       prod: {
         options: {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       }
     },
 
-    //Bundle all the JS together
+    //Bundle all the JS together and create bundle.js in dev
     concat: {
       js: {
         files: {
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       }
     },
 
-    //Build a minified version of modernizr
+    //Build a minified version of modernizr with custom tests based on your design
     modernizr: {
       dist: {
         "parseFiles": true,
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       }
     },
 
-    //Copy fonts from bootstrap to dev and then to dist
+    //Copy fonts from bootstrap* to dev and then to dist (*Bootstrap 4 doesn't contain any fonts so for now this just copies fonts from dev.)
     copy: {
       dist_fonts: {
         files: [{
