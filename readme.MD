@@ -12,11 +12,9 @@ You will only need to follow the installation steps once.
 * Install SASS on your machine (for command line)
 > (http://sass-lang.com/install)
 
-* Install grunt-cli and bower globally
+* Install grunt-cli globally
 
 	**npm install grunt-cli -g**
-
-	**npm install bower -g**
 
 	> Run in project root (public) as administrator / sudo
 
