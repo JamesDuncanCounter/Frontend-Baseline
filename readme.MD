@@ -28,6 +28,6 @@ You will only need to follow the installation steps once.
 
 #Setup
 
-	**npm install**
+	*npm install
 
-	**grunt**
+	*grunt
