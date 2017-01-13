@@ -6,7 +6,6 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-
     // Boot up a server to serve the your  project
     express: {
       prod: {
@@ -36,7 +35,7 @@ module.exports = function(grunt) {
       }
     },
 
-
+    //Build a minified version of modernizr
     modernizr: {
       dist: {
         "parseFiles": true,
@@ -44,30 +43,20 @@ module.exports = function(grunt) {
         "devFile": "dev/javascript/modernizr-custom.js",
         "dest": "dist/js/modernizr.js",
         "tests": [
-          "cssgradients"
+          "cssgradients",
+          "borderradius",
+          "fontface",
+          "flexbox"
         ],
 
         "options": [
-          "domPrefixes",
-          "prefixes",
-          "addTest",
-          "atRule",
-          "hasEvent",
-          "mq",
-          "prefixed",
-          "prefixedCSS",
-          "prefixedCSSValue",
-          "testAllProps",
-          "testProp",
-          "testStyles",
-          "html5shiv",
           "setClasses"
         ],
+
         "uglify": true
       }
     },
 
-    
     //Copy fonts from bootstrap to dev and then to dist
     copy: {
       dist_fonts: {
@@ -105,14 +94,25 @@ module.exports = function(grunt) {
       }
     },
 
-
     //Setup the watch tasks
     watch: {
-        options: {
-          livereload: true,
-        },
-        files: ['./dev/**/*.scss', './dev/app/**/*.js', './dev/app/**/*.html', './dev/fonts/**/*',],
-        tasks: ['sass', 'concat', 'uglify']
+      options: {
+        livereload: true,
+      },
+      files:
+        [
+          './dev/**/*.scss',
+          './dev/app/**/*.js',
+          './dev/app/**/*.html',
+          './dev/fonts/**/*'
+        ],
+
+      tasks:
+        [
+        'sass',
+        'concat',
+        'uglify'
+        ]
     }
   });
 

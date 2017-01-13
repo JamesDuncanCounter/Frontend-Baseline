@@ -2,13 +2,13 @@ header {
 	@include make-col(12);
 	margin-bottom: 2em;
 }
+
 .module-container {
 	@include make-row();
 	flex-direction: row;
 }
 
 .box {
-	@include gradient-directional();
 	border: solid 1px $gray-dark;
 	padding: 20px;
 }
