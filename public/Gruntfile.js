@@ -20,6 +20,15 @@ module.exports = function(grunt) {
       }
     },
 
+    sassdoc: {
+      default: {
+        src: 'dev/**/*.scss',
+        options: {
+          dest: 'dev/_lib'
+        }
+      },
+    },
+
     //Bundle all the JS together and create bundle.js in dev
     concat: {
       js: {
@@ -124,7 +133,9 @@ module.exports = function(grunt) {
     'sass',
     'copy',
     'uglify',
+    'sassdoc',
     'watch'
   ]);
+  
 
 }
