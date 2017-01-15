@@ -1,5 +1,5 @@
 		<footer>
-			<p>This is the footer</p>
+			<p>Footer</p>
 		</footer>
 		<script src="/dist/js/main.min.js"></script>
 	</body>

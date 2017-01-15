@@ -10,7 +10,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<header>
-			<h1>Homepage</h1>
+			<h1 id="page-headline">Homepage</h1>
 		</header>
 	</div>
 </div>

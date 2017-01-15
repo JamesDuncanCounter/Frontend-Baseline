@@ -1,16 +1,46 @@
+
+
 header {
 	@include make-col(12);
 	margin-bottom: 2em;
+	background-color: $gray-lighter;
+	text-align: center;
+	padding: 2em 0;
+
+	//Target all devices larger than mobile
+	@include media-breakpoint-up(sm) {
+
+	}
+
 }
 
 .module-container {
 	@include make-row();
 	flex-direction: row;
-}
+	
+	&.pages {
+		
+		background-color: $gray-lighter;
 
-.box {
-	border: solid 1px $gray-dark;
-	padding: 20px;
-	@include border-radius(10px);
+		div {
+			border: solid 10px $white;
+			text-align: center;
+
+			a {
+				display: block;
+				padding: 2em;
+				text-align: center;
+				height: 100%;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			&:hover {
+				background-color: darken($gray-lighter, 10%);
+			}
+		}
+	}
 }
 
