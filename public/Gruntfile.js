@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       default: {
         src: 'dev/**/*.scss',
         options: {
-          dest: 'dev/_lib'
+          dest: 'dev/_lib/sassdoc'
         }
       },
     },

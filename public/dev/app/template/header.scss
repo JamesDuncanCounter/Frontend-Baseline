@@ -7,11 +7,9 @@ header {
 	text-align: center;
 	padding: 2em 0;
 
-	///Target all devices larger than mobile
 	@include media-breakpoint-up(sm) {
 
 	}
-
 }
 
 .module-container {
