@@ -54,7 +54,8 @@
 
 
 // Custom Styles
-@import "vars";
+@import "core/vars";
+@import "core/mixins";
 @import "../app/article/article";
 @import "../app/template/header";
 @import "../app/template/footer";

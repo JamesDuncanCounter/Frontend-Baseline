@@ -7,6 +7,7 @@ header {
 	color: $white;
 	text-align: center;
 	padding: 2em 0;
+	font-family: "open sans regular", sans-serif;
 
 	//All devices larger than mobile
 	@include media-breakpoint-up(sm) {
