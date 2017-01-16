@@ -52,10 +52,10 @@
 // Utility classes
 @import "../../node_modules/bootstrap/scss/utilities";
 
+@import "core/mixins";
 
 // Custom Styles
 @import "core/vars";
-@import "core/mixins";
 @import "../app/article/article";
 @import "../app/template/header";
 @import "../app/template/footer";
