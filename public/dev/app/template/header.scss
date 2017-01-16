@@ -3,10 +3,12 @@
 header {
 	@include make-col(12);
 	margin-bottom: 2em;
-	background-color: $gray-lighter;
+	background-color: $ca-blue;
+	color: $white;
 	text-align: center;
 	padding: 2em 0;
 
+	//All devices larger than mobile
 	@include media-breakpoint-up(sm) {
 
 	}
@@ -18,7 +20,7 @@ header {
 	
 	&.pages {
 		
-		background-color: $gray-lighter;
+		background-color: $ca-light-blue;
 
 		div {
 			border: solid 10px $white;
@@ -29,6 +31,7 @@ header {
 				padding: 2em;
 				text-align: center;
 				height: 100%;
+				color: $black;
 
 				&:hover {
 					text-decoration: none;
@@ -36,7 +39,7 @@ header {
 			}
 
 			&:hover {
-				background-color: darken($gray-lighter, 10%);
+				background-color: darken($ca-light-blue, 10%);
 			}
 		}
 	}
